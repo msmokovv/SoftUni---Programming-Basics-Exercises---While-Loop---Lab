@@ -1,0 +1,9 @@
+function solve(input) {
+    let index = 0;
+    let n = Number(input.shift()); 
+    while(n < 1 || n > 100){
+        console.log("Invalid Number!");
+        n = Number(input.shift());
+    }
+    console.log(`The number is: ${n}`)
+}
