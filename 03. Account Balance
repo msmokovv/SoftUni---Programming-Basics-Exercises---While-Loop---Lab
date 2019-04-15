@@ -1,0 +1,16 @@
+function solve(input) {
+    let n = Number(input.shift());
+    let counter = 0;
+    let balance = 0.0;
+    while (counter < n){
+        let amound = Number(input.shift());
+        if(amound < 0){
+            console.log("Invalid operation!");
+            break;
+        }
+        balance += amound;
+        console.log(`Increase: ${amound.toFixed(2)}`)
+        counter++;
+    }
+    console.log(`Total: ${balance.toFixed(2)}`);
+}
