@@ -1,0 +1,14 @@
+function solve(input) {
+  let n = Number(input.shift());
+  let min = Number.MAX_SAFE_INTEGER;
+  let count = 0;
+  
+  while(count < n){
+    let num = Number(input.shift())
+    count++;
+    if(num < min){
+      min = num;
+    }
+  }
+console.log(min);
+}
