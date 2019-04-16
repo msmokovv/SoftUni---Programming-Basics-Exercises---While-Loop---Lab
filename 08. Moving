@@ -1,0 +1,31 @@
+function solve(input) {
+  let width = Number(input.shift());
+  let length = Number(input.shift());
+  let height = Number(input.shift());
+
+  let currentBox = input.shift();
+
+  let volume = width * length * height;
+
+  let takenSpace = 0;
+  
+  while(takenSpace <= volume){
+  
+    if(currentBox == 'Done'){  
+      break;
+    }  
+    currentBox = Number(currentBox);
+    takenSpace += currentBox;
+    currentBox = input.shift();
+  }
+    let deff = Math.abs(volume - takenSpace);
+
+    if(takenSpace > volume){
+      console.log(`No more free space! You need ${deff} Cubic meters more.`)
+    }
+    else{
+      console.log(`${deff} Cubic meters left.`)
+   }
+  }
+solve([10,1,2,4,6,"Done"])
+  
