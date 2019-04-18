@@ -1,0 +1,23 @@
+function solve(input){
+  let width = Number(input.shift());
+  let length = Number(input.shift());
+
+  let allPieces = width * length;
+  
+  let piecesCake = input.shift();
+  
+  while (piecesCake != "STOP"){
+    let currentPieces = Number(piecesCake);
+    allPieces -= currentPieces;
+    if(allPieces < 0){
+      console.log(`No more cake left! You need ${Math.abs(allPieces)} pieces more.`) 
+      break;
+    }
+    piecesCake = input.shift();
+  }
+
+  
+  if (piecesCake == "STOP"){
+    console.log(`${allPieces} pieces are left."`)
+  }
+} 
